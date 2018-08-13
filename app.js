@@ -8,22 +8,23 @@ import dotenv from 'dotenv';
 import logger from 'morgan';
 import bodyParser from 'body-parser';
 import cookieParser from 'cookie-parser';
-import mongoclient from 'mongodb';
+/* import mongoclient from 'mongodb'; */
 import webpackDevServer from './webpack/dev-server';
 import routes from './routes';
 
 // Express app setup
 const app = express();
-const MongoClient = mongoclient.MongoClient;
+/* const MongoClient = mongoclient.MongoClient; */
 
 // Mongo Connect
 const uri = 'mongodb://thor:thor123@10.0.6.84:27017/thor_research';
+console.log(uri);
 
-MongoClient.connect(uri, (err, client) => {
+/* MongoClient.connect(uri, (err, client) => {
   const collection = client.db("thor_research").collection("devices");
   console.log(collection);
   client.close();
-});
+}); */
 
 // use dotenv
 dotenv.config({
