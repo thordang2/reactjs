@@ -17,12 +17,11 @@ const app = express();
 const MongoClient = mongoclient.MongoClient;
 
 // Mongo Connect
-const uri = 'mongodb://tho_mongo_1:NlSbvOU6pQzbBBx6@cluster0-shard-00-02-8j4y5.mongodb.net:27017/admin';
+const uri = 'mongodb://thor:thor123@10.0.6.84:27017/thor_research';
+
 MongoClient.connect(uri, (err, client) => {
-  console.log(client);
-  const collection = client.db('rajs').collection('user');
+  const collection = client.db("thor_research").collection("devices");
   console.log(collection);
-  // perform actions on the collection object
   client.close();
 });
 
