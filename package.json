@@ -1,6 +1,7 @@
 {
   "scripts": {
     "start": "babel-node ./server/server.js",
+    "build": "NODE_ENV=production npx parcel build src/index.js -d public/js/ --no-cache",
     "lint": "eslint . --ext .js,.jsx",
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon --exec babel-node ./server/server.js"
