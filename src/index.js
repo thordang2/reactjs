@@ -3,7 +3,7 @@
  */
 import React from 'react';
 import { render } from 'react-dom';
-import MyComponent from './module';
+import Module from './module';
 import styles from '../views/styles/themes.scss';
 
 if (module.hot) {
@@ -12,8 +12,7 @@ if (module.hot) {
 
 console.log(styles);
 
-
-const MainApp = MyComponent;
+const MainApp = Module;
 
 // render the app
 render(<MainApp />, document.getElementById('container'));

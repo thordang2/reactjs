@@ -7,7 +7,8 @@
   },
   "rules": {
     "react/jsx-filename-extension": 0,
-    "react/forbid-prop-types": 0
+    "react/forbid-prop-types": 0,
+    "react/destructuring-assignment": ["<enabled>", "always", { "ignoreClassFields": "<boolean>"}]
   },
   "parser": "babel-eslint"
 }
